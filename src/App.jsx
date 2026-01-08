@@ -1,13 +1,13 @@
+// imports
+
+import { useEffect, useState } from "react";
+import "./App.css";
 //! DO NOT PUT ALL YOU CODE IN JUST APP.jsx
 //! USE COMPONENTS
 // - images container
 // - single image
 // - larger image
 // - ui buttons (left and right)
-
-import { useEffect } from "react";
-
-// imports
 
 // Start with a wire frame: build react app UI first then start coding
 
@@ -39,29 +39,33 @@ function App() {
 
   //functions (event handlers)
   // - when a user clicks an image (update state)
+  // remember that you can feed handlers through to other components
   // - when a user presses a button that should switch the image (left and right)
 
   return (
     <>
       {/* super basic */}
-
-      <h1>Gallery</h1>
-      <div>
-        thumbnail container. showing images with .map (dont firget the key)
-        return (
-        <div>
-          <h1>images here:</h1>
-          {images.map((item) => (
-            <img key={item.id} src={item.url} alt={item.alt} />
-            // {images.map((item) => (
-            //   <img key={item.id} src={item.urls.thumb} />
-            // we can do a smaller one with other dot notations
-          ))}
+      <div className="grid grid-cols-3 grid-rows-2">
+        <h1>Gallery</h1>
+        <div className="row-start-1 row-end-2 col-start-2 col-end-3 overflow-scroll max-w-200 left">
+          thumbnail container. showing images with .map (dont forget the key)
+          <div className="h-30 flex direction-flex-row gap-2 m-2">
+            {images.map((item) => (
+              <img
+                className="p-2 bg-amber-200 rounded-2xl hover:drop-shadow-2xl hover:drop-shadow-amber-950 hover:h-29"
+                key={item.id}
+                src={item.url}
+                alt={item.alt}
+              />
+              // {images.map((item) => (
+              //   <img key={item.id} src={item.urls.thumb} />
+              // we can do a smaller one with other dot notations
+            ))}
+          </div>
         </div>
-        );
-      </div>
 
-      <div>big image or modal for focus image (conditional rendering)</div>
+        <div>big image or modal for focus image (conditional rendering)</div>
+      </div>
     </>
   );
 }
