@@ -7,7 +7,7 @@ REFLECTION
 ✔️ Images from the API are obtained and used in the App
 
 🎯 Return JSX from multiple components (e.g., an ImageItem component for each image and a Gallery component to display them).
--use one for App - use one for image viewer - use one for image toolbar
+✔️ Nav, ImageToolbar, ImageModal, GalleryViewImage, PENDING: SearchBar
 
 🎯 Use the .map() function to render an array of images dynamically - map through them show them in toolbar
 ✔️ Images from the API are shown in the toolbar
