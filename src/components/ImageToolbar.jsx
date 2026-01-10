@@ -44,33 +44,50 @@ export default function ImageToolbar({
   }, [searchQuery, setImages, submitSearch, setSubmitSearch]);
   // - once it is fetched, put it in state
 
+  function handleKeyDown(item) {
+    if (event.key === "Enter") {
+      handleClick(item);
+    }
+  }
+
   function handleClick(item) {
     // console.log({ bigPicture });
-    setBigPicture(item);
+
     console.log({ bigPicture });
     setBiggerPicture(item);
     setIsModalOpen(true);
   }
 
+  function handleGalleryView(item) {
+    setBigPicture(item);
+  }
+
   return (
     <>
       {/* thumbnail container. showing images with .map (dont forget the key) */}
-      <div className="row-start-1 row-end-2 col-start-2 col-end-5 overflow-x-auto w-200 m-w-100 h-35 min-h-15 content-center-safe self-center justify-self-center rounded-2xl">
+      <div
+        className="row-start-1 row-end-2 col-start-2 col-end-5 overflow-x-auto  m-w-200 h-35 min-h-15 content-center-safe self-center justify-self-center rounded-2xl 
+        mt-20
+        focus:outline-2 focus:  outline-offset-2 focus:outline-violet-500 focus:drop-shadow-violet-500
+        shadow-2xl shadow-violet-300"
+      >
         {images ? (
           <>
             {/* individual image div */}
             <div className="h-30 flex direction-flex-row gap-2 ml-5 mr-5">
               {images.map((item) => (
-                // <img
-                //   onClick={() => handleClick(item)}
-                //   className="rounded-2xl hover:drop-shadow-2xl hover:drop-shadow-amber-950  hover:h-29 z-10 cursor-pointer  hover:bg-violet-600 focus:outline-2 focus:outline-offset-2 focus:outline-violet-500 active:bg-violet-700"
-                //   key={item.id}
-                //   src={item.url}
-                //   alt={item.alt}
-                // />
                 <img
+                  tabIndex={"0"}
+                  onKeyDown={() => handleKeyDown(item)}
                   onClick={() => handleClick(item)}
-                  className="rounded-2xl hover:drop-shadow-2xl hover:drop-shadow-amber-950  hover:h-29 z-10 cursor-pointer  hover:bg-violet-600 focus:outline-2 focus:outline-offset-2 focus:outline-violet-500 active:bg-violet-700"
+                  onMouseEnter={() => handleGalleryView(item)}
+                  onMouseLeave={() => handleGalleryView}
+                  onFocus={() => handleGalleryView(item)}
+                  className="rounded-2xl z-10 cursor-pointer 
+                  hover:drop-shadow-2xl hover:drop-shadow-violet-500 hover:h-29 
+                  focus:outline-2 focus:outline-offset-2 focus:outline-violet-500 focus:drop-shadow-2xl  
+                  focus:drop-shadow-violet-500
+                  focus:h-29"
                   key={item.id}
                   alt={item.alt_description}
                   src={item.urls.thumb}
@@ -79,17 +96,16 @@ export default function ImageToolbar({
             </div>{" "}
           </>
         ) : (
-          <p>Enter Search Term Below</p>
+          <div
+            className=" h-35 flex direction-flex-row gap-2 ml-5 mr-5 self-center justify-self-center rounded-2xl 
+            shadow-2xl shadow-violet-300"
+          >
+            <p className="text-violet-400 self-center text-sm font-serif md:text-3xl p-10">
+              Enter Search Term Below...
+            </p>
+          </div>
         )}
       </div>
-      {/* {bigPicture ? (
-                <GalleryViewImage
-                  bigPicture={bigPicture}
-                  biggerPicture={biggerPicture}
-                  setBiggerPicture={setBiggerPicture}
-                  images={images}
-                />
-              ) : null} */}
     </>
   );
 }

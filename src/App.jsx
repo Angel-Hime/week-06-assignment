@@ -64,19 +64,27 @@ function App() {
               setBiggerPicture={setBiggerPicture}
               setIsModalOpen={setIsModalOpen}
             />
+
+            <GalleryViewImage
+              bigPicture={bigPicture}
+              biggerPicture={biggerPicture}
+              setBiggerPicture={setBiggerPicture}
+              images={images}
+              isSearchOpen={isSearchOpen}
+            />
+            {isSearchOpen && (
+              <SearchBar
+                searchQuery={searchQuery}
+                setSearchQuery={setSearchQuery}
+                isSearchOpen={isSearchOpen}
+                setIsSearchOpen={setIsSearchOpen}
+                setSubmitSearch={setSubmitSearch}
+              />
+            )}
           </>
         ) : null}
       </div>
 
-      {isSearchOpen && (
-        <SearchBar
-          searchQuery={searchQuery}
-          setSearchQuery={setSearchQuery}
-          isSearchOpen={isSearchOpen}
-          setIsSearchOpen={setIsSearchOpen}
-          setSubmitSearch={setSubmitSearch}
-        />
-      )}
       {isModalOpen && (
         <ImageModal
           isModalOpen={isModalOpen}
