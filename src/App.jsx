@@ -20,11 +20,12 @@ function App() {
   const [bigPicture, setBigPicture] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
-  const [searchQuery, setSearchQuery] = useState("pictures");
+  const [searchQuery, setSearchQuery] = useState("frog");
   const [images, setImages] = useState([]);
   const [biggerPicture, setBiggerPicture] = useState([]);
   const [submitSearch, setSubmitSearch] = useState(false);
-
+  const [page, setPage] = useState(1);
+  const [totalPages, setTotalPages] = useState([]);
   // function handleSearchClick() {
   //   //TODO: create a modal to display a search bar
   // }
@@ -51,6 +52,8 @@ function App() {
               setIsSearchOpen={setIsSearchOpen}
             />
             <ImageToolbar
+              page={page}
+              setPage={setPage}
               submitSearch={submitSearch}
               setSubmitSearch={setSubmitSearch}
               bigPicture={bigPicture}
@@ -63,6 +66,7 @@ function App() {
               biggerPicture={biggerPicture}
               setBiggerPicture={setBiggerPicture}
               setIsModalOpen={setIsModalOpen}
+              setTotalPages={setTotalPages}
             />
 
             <GalleryViewImage
@@ -79,6 +83,10 @@ function App() {
                 isSearchOpen={isSearchOpen}
                 setIsSearchOpen={setIsSearchOpen}
                 setSubmitSearch={setSubmitSearch}
+                page={page}
+                setPage={setPage}
+                setTotalPages={setTotalPages}
+                totalPages={totalPages}
               />
             )}
           </>

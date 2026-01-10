@@ -51,7 +51,7 @@ REQUIREMENTS AND STRETCH GOALS
 
 🏹 Style the application excellently, using grid or flex and positioning.
 
-    ✔️ - make it look good with tailwindcss
+    ✔️(This I would say is for you to decide but I like how it looks) - make it look good with tailwindcss
 
 ATTRIBUTIONS
 

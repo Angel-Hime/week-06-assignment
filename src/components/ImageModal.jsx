@@ -14,7 +14,7 @@ export default function ImageModal({ biggerPicture, setIsModalOpen }) {
       <section className="relative grid grid-cols-3 grid-rows-3 content-center">
         <img
           className="col-start-1 col-end-4 row-start-1 row-end-4 justify-self-center max-w-screen max-h-screen"
-          src={biggerPicture.urls.raw}
+          src={biggerPicture.urls.full}
           alt={biggerPicture.alt_description}
         />
         <button
