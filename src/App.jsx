@@ -12,11 +12,6 @@ import SearchBar from "./components/SearchBar";
 function App() {
   //TODO: state
 
-  //functions (event handlers)
-  // - when a user clicks an image (update state)
-  // remember that you can feed handlers through to other components
-  // - when a user presses a button that should switch the image (left and right)
-
   const [bigPicture, setBigPicture] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
@@ -26,13 +21,9 @@ function App() {
   const [submitSearch, setSubmitSearch] = useState(false);
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState([]);
-  // function handleSearchClick() {
-  //   //TODO: create a modal to display a search bar
-  // }
 
-  // function handleMinimizeClick() {
-  //   setBiggerPicture(null);
-  // }
+  //   //TODO: create a modal to display a search bar
+
   return (
     <>
       {/* main div */}

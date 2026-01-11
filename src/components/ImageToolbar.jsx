@@ -13,15 +13,8 @@ export default function ImageToolbar({
   page,
   setTotalPages,
 }) {
-  // - fetch data from the API - https://week-6-api.vercel.app/api/images (array of objects id, title, url, alt) (REMEMBER THAT UNSPLASH IS AN OBJECT OF AN ARRAY OF OBJECTS SO YOU MUST USE data.results FOR UNSPLASH!!!!!)
-
-  //placeholder --> this will be form value when search bar complete <-- remember this will be from a component
-
   useEffect(() => {
     async function getData() {
-      //   const response = await fetch(
-      //     `https://week-6-api.vercel.app/api/${import.meta.env.VITE_API_KEY}`
-      //   );
       const currentPage = page;
       const searchInput = searchQuery;
       console.log(searchInput);
@@ -46,7 +39,6 @@ export default function ImageToolbar({
     page,
     setTotalPages,
   ]);
-  // - once it is fetched, put it in state
 
   function handleKeyDown(item) {
     if (event.key === "Enter") {
@@ -55,8 +47,6 @@ export default function ImageToolbar({
   }
 
   function handleClick(item) {
-    // console.log({ bigPicture });
-
     console.log({ bigPicture });
     setBiggerPicture(item);
     setIsModalOpen(true);

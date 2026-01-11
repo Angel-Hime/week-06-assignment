@@ -5,7 +5,6 @@ export default function SearchBar({
   setPage,
   page,
   totalPages,
-  //   setSubmitSearch,
 }) {
   function handlePrevPage() {
     if (page > 1) {
@@ -49,8 +48,8 @@ export default function SearchBar({
         Showing results for: '{searchQuery}'
       </p>
       <p
-        className="col-start-3 col-end-4 row-start-3 row-end-4 self-start
-        justify-self-center text-sm md:text-lg p-2 text-white"
+        className="col-start-3 col-end-4 row-start-3 row-end-4 self-start text-center
+        justify-self-center text-sm p-2 text-white"
       >
         Page: {page} of {totalPages}
       </p>

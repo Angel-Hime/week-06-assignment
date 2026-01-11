@@ -1,3 +1,11 @@
+Gallery App Using Unsplash API
+
+This app uses the Unsplash API to display an array of images in a toolbar, providing a larger image when hovered and opening a modal when the specific is clicked on, as represented by the magnifying glass cursor. You can exit the fullscreen modal using the minimise button in the top left corner of the modal. The app uses responsive design features to ensure the page elements can be displayed in varying window sizes.
+
+Additional functionality includes tabbing throught the images within the toolbar and selecting which one to set to fullscreen using the enter key. You can exit the fullscreen modal by tabbing to the minimise button and pushing the space key, or you can press escape.
+
+There is also a search functionality, which can accessed when the search button is clicked. The default search provides pictures of frogs but the active search functionality allows for the user to had images load whilst they type. The user can hit enter to close the modal or switch between the pages of the search results using the next page or prev page buttons.
+
 REFLECTION
 
 Ultimately, I think I would be grateful to know if there was just a more efficient way of doing what I have done please.
@@ -55,13 +63,11 @@ REQUIREMENTS AND STRETCH GOALS
 
 ATTRIBUTIONS
 
-scale up
-<a href="https://www.flaticon.com/free-icons/full-screen" title="full screen icons">Full screen icons created by Freepik - Flaticon</a>
-
 scale down
 <a href="https://www.flaticon.com/free-icons/shrink" title="shrink icons">Shrink icons created by Mayor Icons - Flaticon</a>
 
 search
 <a href="https://www.flaticon.com/free-icons/searching-bar" title="searching bar icons">Searching bar icons created by Wahyu.Setyanto - Flaticon</a>
 
-SOURCES
+gallery
+<a href="https://www.flaticon.com/free-icons/gallery" title="gallery icons">Gallery icons created by Freepik - Flaticon</a>

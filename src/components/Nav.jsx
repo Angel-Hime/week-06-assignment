@@ -1,14 +1,4 @@
-export default function Nav({
-  //   bigPicture,
-  //   setIsModalOpen,
-  isSearchOpen,
-  setIsSearchOpen,
-  //   setBiggerPicture,
-}) {
-  //   function toggleModal() {
-  //     setIsModalOpen(true);
-  //     setBiggerPicture(bigPicture);
-  //   }
+export default function Nav({ isSearchOpen, setIsSearchOpen }) {
   function toggleSearchModal() {
     if (isSearchOpen) {
       setIsSearchOpen(false);
@@ -31,19 +21,6 @@ export default function Nav({
           alt="Search For New Images"
         />
       </button>
-      {/* Button to fullscreen image */}
-      {/* {bigPicture.urls ? (
-        <button
-          className=" top-10 left-10 absolute bg-[#46424269] hover:bg-[#fcfafa6e] rounded-sm z-10"
-          onClick={() => toggleModal()}
-        >
-          <img
-            className="min-h-6 min-w-6 max-h-8 max-w-8 p-2 hover:h-8"
-            src="public/icons/scale_up.png"
-            alt="Enlarge Image"
-          />
-        </button>
-      ) : null} */}
     </nav>
   );
 }
