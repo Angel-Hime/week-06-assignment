@@ -27,8 +27,8 @@ export default function Nav({
       >
         <img
           className="h-10 md:h-20 p-2 "
-          src="public/icons/search.png"
-          alt="Enlarge Image"
+          src="/icons/search.png"
+          alt="Search For New Images"
         />
       </button>
       {/* Button to fullscreen image */}

@@ -25,7 +25,7 @@ export default function ImageModal({ biggerPicture, setIsModalOpen }) {
         >
           <img
             className="min-h-6 min-w-6 max-h-8 max-w-8 p-2"
-            src="public/icons/scale-down.png"
+            src="/icons/scale-down.png"
             alt="minimize"
           />
         </button>
